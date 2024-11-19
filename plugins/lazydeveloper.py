@@ -179,7 +179,8 @@ async def check(c, m):
     # Initialize Telethon client
     try:
         lazydeveloperrsession = TelegramClient(StringSession(TELETHON_SESSION), API_ID, API_HASH)
-        lazydeveloperrsession.start()
+        await lazydeveloperrsession.start()
+        print(f'Session connected successfully ✅')
     except Exception as ap:
         print(f"ERROR - {ap}")
         exit(1)
